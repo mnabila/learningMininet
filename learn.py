@@ -5,7 +5,7 @@ class GedungSatu(Topo):
     def __init__(self, **opts):
         Topo.__init__(self, **opts)
 
-        # tambah client sebanyak 12 komputer
+        # tambah client sebanyak 15 komputer
         h1 = self.addHost("h1")
         h2 = self.addHost("h2")
         h3 = self.addHost("h3")
