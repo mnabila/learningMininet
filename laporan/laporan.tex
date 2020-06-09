@@ -1,0 +1,201 @@
+\documentclass[letterpaper]{article}
+\usepackage[ascii]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=laporan, pdfauthor=mnabila , pdfsubject=laporan, pdfkeywords=laporan}
+\usepackage[pdftex]{graphicx}
+% Outline numbering
+\setcounter{secnumdepth}{0}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+% Page layout (geometry)`
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{0.7874in}
+\setlength\oddsidemargin{0.7874in}
+\setlength\textheight{9.4251995in}
+\setlength\textwidth{6.9251995in}
+\setlength\footskip{0.0cm}
+\setlength\headheight{0cm}
+\setlength\headsep{0cm}
+\setlength\parindent{1em}
+% Footnote rule
+\setlength{\skip\footins}{0.0469in}
+\renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
+% Pages styles
+\makeatletter
+\newcommand\ps@Standard{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{}
+  \renewcommand\thepage{\arabic{page}}
+}
+\makeatother
+\pagestyle{Standard}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+% List styles
+\newcounter{saveenum}
+\newcommand\liststyleLi{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\newcommand\liststyleLii{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\newcommand\liststyleLiii{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\newcommand\liststyleLiv{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\newcommand\liststyleLv{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\newcommand\liststyleLvi{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\newcommand\liststyleLvii{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\title{}
+\author{mnabila }
+\date{2020-06-09}
+\begin{document}
+{\centering\bfseries
+LAPORAN TUGAS AKHIR
+\par}
+
+{\centering
+Mendesain Jaringan SDN Dengan Mininet
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+
+\begin{center}
+\includegraphics[width=3.852in,height=3.852in]{gambar/logo.png}
+\end{center}
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+{\centering\bfseries
+Anggota
+\par}
+
+{\centering
+Anang Ma'rub (17183207047)
+\par}
+
+{\centering
+Faris Saifudin (17183207059)
+\par}
+
+{\centering
+Muhammad Ihza Rois Akbar (17183207055)
+\par}
+
+{\centering
+Muhammad Nabil Adani (17183207008)
+\par}
+
+{\centering
+Yusuf Yoga Bakti (17183207064)
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+{\centering\bfseries
+Universitas Bhinneka PGRI
+\par}
+
+{\centering\bfseries
+Tulungagung
+\par}
+
+{\centering\bfseries
+2020
+\par}
+
+\include{katapengantar}
+\include{bab1}
+\include{bab2}
+\include{bab3}
+\include{bab4}
+\include{lampiran}
+\end{document}

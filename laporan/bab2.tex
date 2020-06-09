@@ -1,0 +1,96 @@
+\section{BAB 2}
+\section{MATERI}
+\subsection{2.1 Software Define Network}
+\ \ \ \ Software Defined Network (SDN) adalah istilah yang merujuk pada konsep/paradigma baru dalam mendisain, mengelola dan
+mengimplementasikan jaringan, terutama untuk mendukung kebutuhan dan inovasi di bidang ini yg semakin lama semakin
+kompleks. Konsep dasar SDN adalah dengan melakukan pemisahan eksplisit antara control dan forwarding plane, serta
+kemudian melakukan abstraksi sistem dan meng-isolasi kompleksitas yg ada pada komponen atau sub-sistem dengan
+mendefinisikan antar-muka (interface) yg standard.
+
+Beberapa aspek penting dari SDN adalah :
+\liststyleLii
+\begin{enumerate}
+\item Adanya pemisahan secara fisik/eksplisit antara forwarding/data-plane dan control-plane
+\item Antarmuka standard (vendor-agnosic) untuk memprogram perangkat jaringan
+\item Control-plane yang terpusat (secara logika) atau adanya sistem operasi jaringan yang mampu membentuk peta logika
+(logical map) dari seluruh jaringan dan kemudian memrepresentasikannya melalui (sejenis) API (Application Programming
+Interface)
+\item Virtualisasi dimana beberapa sistem operasi jaringan dapat mengkontrol bagian-bagian (slices atau substrates) dari
+perangkat yang sama.
+\end{enumerate}
+
+Dalam konsep SDN, tersedia open interface yg memungkinkan sebuah entitas software/aplikasi untuk mengendalikan
+konektivitas yg disediakan oleh sejumlah sumber-daya jaringan, mengendalikan aliran trafik yg melewatinya serta
+melakukan inspeksi terhadap atau memodifikasi trafik tersebut.
+
+Arsitektur SDN dapat dilihat sebagai 3 lapis/bidang:
+\liststyleLiii
+\begin{enumerate}
+\item Infrastruktur (data-plane / infrastructure layer)
+\end{enumerate}
+Terdiri dari elemen jaringan yg dapat mengatur SDN Datapath sesuai dengan instruksi yg diberikan melalui
+Control-Data-Plane Interface (CDPI)
+
+\liststyleLiii
+\setcounter{saveenum}{\value{enumi}}
+\begin{enumerate}
+\setcounter{enumi}{\value{saveenum}}
+\item Kontrol (control plane / layer)
+\end{enumerate}
+Entitas kontrol (SDN Controller) mentranslasikan kebutuhan aplikasi dengan infrastruktur dengan memberikan instruksi yg
+sesuai untuk SDN Datapath serta memberikan informasi yg relevan dan dibutuhkan oleh SDN Application
+
+\liststyleLiii
+\setcounter{saveenum}{\value{enumi}}
+\begin{enumerate}
+\setcounter{enumi}{\value{saveenum}}
+\item Aplikasi (application plane / layer)
+\end{enumerate}
+Berada pada lapis teratas, berkomunikasi dengan sistem via NorthBound Interface (NBI)
+
+
+\subsection{2.2 Mininet}
+\ \ \ \ Mininet merupakah salah satu emulator jaringan sdn yang bisa menjalankan sebuah jaringan virtual yang mana dalam
+jaringan tersebut terdapat host, switch, controller serta link antar virtual device yang ada. Host pada mininet
+menggunakan sebuah perangkat lunak jaringan linux. Switch mininet dapat mendukung protokol openflow \ dengan routing
+yang fleksible serta compatible dengan software define network. 
+
+Beberapa keuntungan dari penggunaan emulator mininet:
+\liststyleLiv
+\begin{enumerate}
+\item Dapat melakukan emulasi jaringan SDN dengan jumlah yang besar.
+\item Mengaktifkan beberapa mengembang untuk berkerja secara independen pada topologi yang sama.
+\item Memungkinkan pengujian topologi yang kompleks tanpa menggunakan jaringan fisik.
+\item Mendukung custom topologi yang mudah dimodifikasi.
+\item Menyediakan API python yang mudah dan dapat diperluas untuk pembuatan dan eksperimen jaringan
+\end{enumerate}
+
+Beberapa kekurangan dari penggunaan emulator mininet:
+\liststyleLv
+\begin{enumerate}
+\item Tidak memiliki GUI yang lebih interaktif dan ramah terhadap pemula.
+\item Tidak mudah dalam memahaminya.
+\item Pada node tidak jelas perangkat apa yang sedang digunakan.
+\item Tidak adanya perangkat wirelles pada mininet.
+\end{enumerate}
+
+
+\subsection{2.3 Floodlight}
+\ \ \ \ Floodlight adalah sebuah controller SDN yang cukup populer, controller ini merupakan kontribusi dari Big Big Switch
+Networks ke komunitas open source. Floodlight adalah sebuah pengendali \ openflow yang dibangung menggunakan bahasa
+pemrograman java yang menggunakan lisensi Apache non-OSGI. 
+
+Arsitektur pada floodlight ini bersifat modular, maksudnya adalah komponen pada floodlight mudah dikembangkan sesuai
+dengan keinginan. 
+
+Komponen komponen pada floodlight ini meliputi
+\liststyleLvi
+\begin{enumerate}
+\item Manajemen topologi.
+\item Manajemen perangkat meliputi MAC Address dan IP Address.
+\item Path computation.
+\item Infrastruktu dengan akses web untuk management.
+\item Counter store.
+\item Menggunakan database untuk menyimpan datanya defaultnya menggunakan memory.
+\item Menyediakan REST API untuk pengembangan notifikasi dan sejenisnya.
+\end{enumerate}

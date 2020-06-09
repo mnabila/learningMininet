@@ -1,0 +1,453 @@
+\section{Lampiran}
+\subsection{config.py}
+Configurasi mininet dengan 15 computer dan 7 buah switch
+configurasi bisa diakses melalui \url{https://github.com/mnabila/learningMininet}
+
+from mininet.topo import Topo
+
+from mininet.net import OVSKernelSwitch
+
+\bigskip
+
+class GedungSatu(Topo):
+
+\ \ \ \ def \_\_init\_\_(self, **opts):
+
+\ \ \ \ \ \ \ \ Topo.\_\_init\_\_(self, **opts)
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# tambah client sebanyak 15 komputer
+
+\ \ \ \ \ \ \ \ h1 = self.addHost(name={\textquotedbl}h1{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:01{\textquotedbl}, ip={\textquotedbl}192.168.100.10/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h2 = self.addHost(name={\textquotedbl}h2{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:02{\textquotedbl}, ip={\textquotedbl}192.168.100.11/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h3 = self.addHost(name={\textquotedbl}h3{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:03{\textquotedbl}, ip={\textquotedbl}192.168.100.12/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h4 = self.addHost(name={\textquotedbl}h4{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:04{\textquotedbl}, ip={\textquotedbl}192.168.100.13/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h5 = self.addHost(name={\textquotedbl}h5{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:05{\textquotedbl}, ip={\textquotedbl}192.168.100.14/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h6 = self.addHost(name={\textquotedbl}h6{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:06{\textquotedbl}, ip={\textquotedbl}192.168.100.15/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h7 = self.addHost(name={\textquotedbl}h7{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:07{\textquotedbl}, ip={\textquotedbl}192.168.100.16/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h8 = self.addHost(name={\textquotedbl}h8{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:08{\textquotedbl}, ip={\textquotedbl}192.168.100.17/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h9 = self.addHost(name={\textquotedbl}h9{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:09{\textquotedbl}, ip={\textquotedbl}192.168.100.18/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h10 = self.addHost(name={\textquotedbl}h10{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:10{\textquotedbl}, ip={\textquotedbl}192.168.100.19/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h11 = self.addHost(name={\textquotedbl}h11{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:11{\textquotedbl}, ip={\textquotedbl}192.168.100.20/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h12 = self.addHost(name={\textquotedbl}h12{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:12{\textquotedbl}, ip={\textquotedbl}192.168.100.21/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h13 = self.addHost(name={\textquotedbl}h13{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:13{\textquotedbl}, ip={\textquotedbl}192.168.100.22/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h14 = self.addHost(name={\textquotedbl}h14{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:14{\textquotedbl}, ip={\textquotedbl}192.168.100.23/27{\textquotedbl})
+
+\ \ \ \ \ \ \ \ h15 = self.addHost(name={\textquotedbl}h15{\textquotedbl},
+mac={\textquotedbl}00:00:00:00:0h:15{\textquotedbl}, ip={\textquotedbl}192.168.100.24/27{\textquotedbl})
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# tambah switch sebanyak 7 buah
+
+\ \ \ \ \ \ \ \ s1 = self.addSwitch(name={\textquotedbl}s1{\textquotedbl}, cls=OVSKernelSwitch,
+mac={\textquotedbl}00:00:00:00:0s:01{\textquotedbl},)
+
+\ \ \ \ \ \ \ \ s2 = self.addSwitch(name={\textquotedbl}s2{\textquotedbl}, cls=OVSKernelSwitch,
+mac={\textquotedbl}00:00:00:00:0s:02{\textquotedbl},)
+
+\ \ \ \ \ \ \ \ s3 = self.addSwitch(name={\textquotedbl}s3{\textquotedbl}, cls=OVSKernelSwitch,
+mac={\textquotedbl}00:00:00:00:0s:03{\textquotedbl},)
+
+\ \ \ \ \ \ \ \ s4 = self.addSwitch(name={\textquotedbl}s4{\textquotedbl}, cls=OVSKernelSwitch,
+mac={\textquotedbl}00:00:00:00:0s:04{\textquotedbl},)
+
+\ \ \ \ \ \ \ \ s5 = self.addSwitch(name={\textquotedbl}s5{\textquotedbl}, cls=OVSKernelSwitch,
+mac={\textquotedbl}00:00:00:00:0s:05{\textquotedbl},)
+
+\ \ \ \ \ \ \ \ s6 = self.addSwitch(name={\textquotedbl}s6{\textquotedbl}, cls=OVSKernelSwitch,
+mac={\textquotedbl}00:00:00:00:0s:06{\textquotedbl},)
+
+\ \ \ \ \ \ \ \ s7 = self.addSwitch(name={\textquotedbl}s7{\textquotedbl}, cls=OVSKernelSwitch,
+mac={\textquotedbl}00:00:00:00:0s:07{\textquotedbl},)
+
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# membuat topologi tree
+
+\ \ \ \ \ \ \ \ \# menghubungkan switch bagian atas
+
+\ \ \ \ \ \ \ \ \# menghubungkan switch s1,s2,s3 ke switch s1
+
+\ \ \ \ \ \ \ \ self.addLink(s2, s1)
+
+\ \ \ \ \ \ \ \ self.addLink(s3, s1)
+
+\ \ \ \ \ \ \ \ self.addLink(s4, s1)
+
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# menguhubungkan kedua switch untuk jaringan atas dan bawah
+
+\ \ \ \ \ \ \ \ self.addLink(s5, s1)
+
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# menghubungkan switch bagian bawah
+
+\ \ \ \ \ \ \ \ \# menghubungkan switch s6,s7 ke switch s5
+
+\ \ \ \ \ \ \ \ self.addLink(s6, s5)
+
+\ \ \ \ \ \ \ \ self.addLink(s7, s5)
+
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# menghubungkan client ke setiap switch bagian atas
+
+\ \ \ \ \ \ \ \ \# menghubungkan client ke switch s2
+
+\ \ \ \ \ \ \ \ self.addLink(h1, s2)
+
+\ \ \ \ \ \ \ \ self.addLink(h2, s2)
+
+\ \ \ \ \ \ \ \ self.addLink(h3, s2)
+
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# menghubungkan client ke switch s3
+
+\ \ \ \ \ \ \ \ self.addLink(h4, s3)
+
+\ \ \ \ \ \ \ \ self.addLink(h5, s3)
+
+\ \ \ \ \ \ \ \ self.addLink(h6, s3)
+
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# menghubungkan client ke switch s4
+
+\ \ \ \ \ \ \ \ self.addLink(h7, s4)
+
+\ \ \ \ \ \ \ \ self.addLink(h8, s4)
+
+\ \ \ \ \ \ \ \ self.addLink(h9, s4)
+
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# menguhubungkan client ke setiap switch bagian bawah
+
+\ \ \ \ \ \ \ \ \# menghubungkan client ke switch s6
+
+\ \ \ \ \ \ \ \ self.addLink(h10, s6)
+
+\ \ \ \ \ \ \ \ self.addLink(h11, s6)
+
+\ \ \ \ \ \ \ \ self.addLink(h12, s6)
+
+
+\bigskip
+
+\ \ \ \ \ \ \ \ \# menghubungkan client ke switch s7
+
+\ \ \ \ \ \ \ \ self.addLink(h13, s7)
+
+\ \ \ \ \ \ \ \ self.addLink(h14, s7)
+
+\ \ \ \ \ \ \ \ self.addLink(h15, s7)
+
+
+\bigskip
+
+topos = \{{\textquotedbl}g1{\textquotedbl}: (lambda: GedungSatu())\}
+
+
+\subsection{Uji Coba}
+console log ping pada semua host di topologi jaringan mininet kami dengan mengirimkan dua paket saja untuk menghemat
+durasi dan agar log pingnya tidak terlalu panjang 
+
+test ping dilakukan dari h1 menuju host lainnya
+
+\bigskip
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.10
+
+PING 192.168.100.10 (192.168.100.10) 56(84) bytes of data.
+
+64 bytes from 192.168.100.10: icmp\_seq=1 ttl=64 time=0.048 ms
+
+64 bytes from 192.168.100.10: icmp\_seq=2 ttl=64 time=0.057 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.10 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1003ms
+
+rtt min/avg/max/mdev = 0.048/0.052/0.057/0.008 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.11
+
+PING 192.168.100.11 (192.168.100.11) 56(84) bytes of data.
+
+64 bytes from 192.168.100.11: icmp\_seq=1 ttl=64 time=16.6 ms
+
+64 bytes from 192.168.100.11: icmp\_seq=2 ttl=64 time=0.831 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.11 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1002ms
+
+rtt min/avg/max/mdev = 0.831/8.748/16.666/7.918 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.12
+
+PING 192.168.100.12 (192.168.100.12) 56(84) bytes of data.
+
+64 bytes from 192.168.100.12: icmp\_seq=1 ttl=64 time=16.6 ms
+
+64 bytes from 192.168.100.12: icmp\_seq=2 ttl=64 time=3.64 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.12 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1002ms
+
+rtt min/avg/max/mdev = 3.641/10.143/16.646/6.503 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.13
+
+PING 192.168.100.13 (192.168.100.13) 56(84) bytes of data.
+
+64 bytes from 192.168.100.13: icmp\_seq=1 ttl=64 time=474 ms
+
+64 bytes from 192.168.100.13: icmp\_seq=2 ttl=64 time=1.02 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.13 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1001ms
+
+rtt min/avg/max/mdev = 1.021/237.726/474.431/236.705 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.14
+
+PING 192.168.100.14 (192.168.100.14) 56(84) bytes of data.
+
+64 bytes from 192.168.100.14: icmp\_seq=1 ttl=64 time=51.1 ms
+
+64 bytes from 192.168.100.14: icmp\_seq=2 ttl=64 time=1.69 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.14 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1000ms
+
+rtt min/avg/max/mdev = 1.693/26.428/51.164/24.736 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.15
+
+PING 192.168.100.15 (192.168.100.15) 56(84) bytes of data.
+
+64 bytes from 192.168.100.15: icmp\_seq=1 ttl=64 time=42.5 ms
+
+64 bytes from 192.168.100.15: icmp\_seq=2 ttl=64 time=1.10 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.15 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1001ms
+
+rtt min/avg/max/mdev = 1.105/21.826/42.548/20.722 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.16
+
+PING 192.168.100.16 (192.168.100.16) 56(84) bytes of data.
+
+64 bytes from 192.168.100.16: icmp\_seq=1 ttl=64 time=39.8 ms
+
+64 bytes from 192.168.100.16: icmp\_seq=2 ttl=64 time=1.55 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.16 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1001ms
+
+rtt min/avg/max/mdev = 1.557/20.714/39.872/19.158 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.17
+
+PING 192.168.100.17 (192.168.100.17) 56(84) bytes of data.
+
+64 bytes from 192.168.100.17: icmp\_seq=1 ttl=64 time=53.8 ms
+
+64 bytes from 192.168.100.17: icmp\_seq=2 ttl=64 time=1.59 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.17 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1001ms
+
+rtt min/avg/max/mdev = 1.598/27.720/53.842/26.122 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.18
+
+PING 192.168.100.18 (192.168.100.18) 56(84) bytes of data.
+
+64 bytes from 192.168.100.18: icmp\_seq=1 ttl=64 time=39.7 ms
+
+64 bytes from 192.168.100.18: icmp\_seq=2 ttl=64 time=1.40 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.18 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1001ms
+
+rtt min/avg/max/mdev = 1.406/20.567/39.729/19.162 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.19
+
+PING 192.168.100.19 (192.168.100.19) 56(84) bytes of data.
+
+64 bytes from 192.168.100.19: icmp\_seq=1 ttl=64 time=60.0 ms
+
+64 bytes from 192.168.100.19: icmp\_seq=2 ttl=64 time=4.29 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.19 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1001ms
+
+rtt min/avg/max/mdev = 4.290/32.191/60.093/27.902 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.20
+
+PING 192.168.100.20 (192.168.100.20) 56(84) bytes of data.
+
+64 bytes from 192.168.100.20: icmp\_seq=1 ttl=64 time=50.6 ms
+
+64 bytes from 192.168.100.20: icmp\_seq=2 ttl=64 time=1.69 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.20 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1002ms
+
+rtt min/avg/max/mdev = 1.698/26.154/50.610/24.456 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.21
+
+PING 192.168.100.21 (192.168.100.21) 56(84) bytes of data.
+
+64 bytes from 192.168.100.21: icmp\_seq=1 ttl=64 time=52.6 ms
+
+64 bytes from 192.168.100.21: icmp\_seq=2 ttl=64 time=2.09 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.21 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1002ms
+
+rtt min/avg/max/mdev = 2.095/27.364/52.633/25.269 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.22
+
+PING 192.168.100.22 (192.168.100.22) 56(84) bytes of data.
+
+64 bytes from 192.168.100.22: icmp\_seq=1 ttl=64 time=39.9 ms
+
+64 bytes from 192.168.100.22: icmp\_seq=2 ttl=64 time=1.42 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.22 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1001ms
+
+rtt min/avg/max/mdev = 1.425/20.705/39.985/19.280 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.23
+
+PING 192.168.100.23 (192.168.100.23) 56(84) bytes of data.
+
+64 bytes from 192.168.100.23: icmp\_seq=1 ttl=64 time=35.9 ms
+
+64 bytes from 192.168.100.23: icmp\_seq=2 ttl=64 time=1.26 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.23 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1001ms
+
+rtt min/avg/max/mdev = 1.268/18.633/35.999/17.366 ms
+
+mininet{\textgreater} h1 ping -c 2 192.168.100.24
+
+PING 192.168.100.24 (192.168.100.24) 56(84) bytes of data.
+
+64 bytes from 192.168.100.24: icmp\_seq=1 ttl=64 time=43.7 ms
+
+64 bytes from 192.168.100.24: icmp\_seq=2 ttl=64 time=1.13 ms
+
+
+\bigskip
+
+{}-{}-{}- 192.168.100.24 ping statistics -{}-{}-
+
+2 packets transmitted, 2 received, 0\% packet loss, time 1001ms
+
+rtt min/avg/max/mdev = 1.131/22.460/43.790/21.330 ms
+
+mininet{\textgreater}
